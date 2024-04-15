@@ -83,3 +83,25 @@ if ( ! function_exists( 'astra_register_menu_locations' ) ) {
 }
 
 add_action( 'init', 'astra_register_menu_locations' );
+
+add_filter( 'wp_nav_menu_items', 'dcms_items_login_logout', 10, 2);
+
+function dcms_items_login_logout ( $items, $args ) {
+
+     if ($args->theme_location == 'primary') {
+         if (is_user_logged_in())
+         {
+              $items .= "<li class='menu-item btn-menu btn-logout'>
+			            <a href='wp-login.php?=action=logout'> log Out </a>
+                         </li>";
+         }
+         else
+         {
+              $items .= "<li class='menu-item btn-menu btn-login'>
+                         <ahref='wp-login.php?=action=login'> log in </a>
+                         </li>";
+         }
+     }
+     
+     return $items;
+}
