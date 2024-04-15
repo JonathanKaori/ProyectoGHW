@@ -1,0 +1,21 @@
+2024-04-14T03:09:46+00:00 NOTICE profile :: user_update_subscribe_status :: Array
+(
+    [subscribed] => 0
+    [user_id] => 3
+    [gdpr_fields] => 
+)
+
+2024-04-14T03:09:46+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 3
+2024-04-14T03:09:56+00:00 NOTICE member.sync :: henryalonzo16@gmail.com is Pending Double OptIn :: Array
+(
+    [status_if_new] => 0
+    [has_doi] => 
+    [status_meta] => Array
+        (
+            [requires_double_optin] => 
+            [created] => 0
+            [updated] => 0
+        )
+
+)
+
